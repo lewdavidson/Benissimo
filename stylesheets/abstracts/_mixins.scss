@@ -2,26 +2,39 @@
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
 
-/// Event wrapper
-/// @author Harry Roberts
-/// @param {Bool} $self [false] - Whether or not to include current selector
-/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
-=on-event($self: false)
-  @if $self
-    &,
-    &:hover,
-    &:active,
-    &:focus
-      @content
-  @else
-    &:hover,
-    &:active,
-    &:focus
-      @content
+@mixin grid($cols, $mgn) {
+  float: left;
+  margin-right: $mgn;
+  margin-bottom: $mgn;
+  width: ((100% - (($cols - 1) * $mgn)) / $cols);
+    &:nth-child(#{$cols}n) {
+      margin-right: 0;
+    }
+}
 
-/// Make a context based selector a little more friendly
-/// @author Hugo Giraudel
-/// @param {String} $context
-=when-inside($context)
-  #{$context} &
-    @content
+@mixin clearFix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin mQ($arg...){
+  @if length($arg) == 1{
+    @media screen and (max-width: nth($arg, 1)){
+      @content;
+    }
+  }
+  @if length($arg) == 2{
+    @media screen and (max-width: nth($arg,1)) and (min-width: nth($arg, 2)){
+      @content;
+    }
+  }
+}
+
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+     -moz-box-sizing: $box-model; // Firefox <= 19
+          box-sizing: $box-model;
+}

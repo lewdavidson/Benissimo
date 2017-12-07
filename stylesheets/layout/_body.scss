@@ -1,0 +1,31 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the body of the site/application.
+// -----------------------------------------------------------------------------
+//$breakpoints: ("small": 320px, "medium": 768px, "large": 1024px) !default
+
+.box {
+  & h2 {
+    text-align: center;
+  }
+  @include mQ($medium, $small){
+    @include grid(1, 2%);
+    padding: 10px;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.textbox {
+  position: relative;
+  @include mQ ($medium, $small) {
+    & p {
+      padding: 15px;
+    }
+    & a {
+      text-align: center;
+      display: block;
+    }
+  }
+}

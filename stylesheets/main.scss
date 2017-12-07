@@ -5,8 +5,7 @@
   'abstracts/mixins';
 
 // 2. Vendors
-@import
-  'vendor/normalize';
+
 
 // 3. Base stuff
 @import
@@ -18,14 +17,13 @@
 // 4. Layout-related sections
 @import
   'layout/header',
-  'layout/section',
+  'layout/body',
   'layout/footer';
 
 // 5. Components
 @import
   'components/button',
-  'components/event-finder',
-  'components/search';
+  'components/images';
 
 // 6. Page-specific styles
 @import
