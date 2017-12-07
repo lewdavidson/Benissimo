@@ -6,7 +6,10 @@
 
 .box {
   & h2 {
+    color: darken($blue, 20%);
     text-align: center;
+    font-size: 35px;
+    line-height: 1;
   }
   & a {
     text-decoration: none;
@@ -22,8 +25,6 @@
     @include grid(2, 2%);
   }
 }
-
-
 
 .textbox {
   position: relative;
@@ -42,5 +43,20 @@
     & p {
       padding: 15px;
     }
+  }
+  @include mQ($large){
+    width: 47%;
+    height: 41.5em;
+    float: right;
+  }
+}
+
+.top{
+  @include mQ($large){
+    width: 50%;
+    float: left;
+  }
+  & .box{
+    width: 100%;
   }
 }

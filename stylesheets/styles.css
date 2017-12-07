@@ -62,7 +62,10 @@ header {
   color: #D6A99A; }
 
 .box h2 {
-  text-align: center; }
+  color: #95a89b;
+  text-align: center;
+  font-size: 35px;
+  line-height: 1; }
 .box a {
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
@@ -105,6 +108,18 @@ header {
         margin-right: 0; }
       .textbox p {
         padding: 15px; } }
+  @media screen and (max-width: 1024px) {
+    .textbox {
+      width: 47%;
+      height: 41.5em;
+      float: right; } }
+
+@media screen and (max-width: 1024px) {
+  .top {
+    width: 50%;
+    float: left; } }
+.top .box {
+  width: 100%; }
 
 i.material-icons {
   float: right; }
