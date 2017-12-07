@@ -3,6 +3,7 @@
 // -----------------------------------------------------------------------------
 //$breakpoints: ("small": 320px, "medium": 768px, "large": 1024px) !default
 
+
 .box {
   & h2 {
     text-align: center;
@@ -13,9 +14,7 @@
   }
 }
 
-img {
-  width: 100%;
-}
+
 
 .textbox {
   position: relative;

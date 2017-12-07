@@ -1,4 +1,6 @@
-
+img {
+  width: 100%;
+}
 
 .illustration {
   @include mQ($medium, $small){
@@ -13,4 +15,36 @@
       top: 70%;
     }
   }
+}
+
+.display-photo {
+  width: 100%;
+  height: 300px;
+}
+
+#veg {
+  background-image: url("../img/veg2.jpg");
+  @include topper;
+}
+
+#pie {
+  background-image: url("../img/rocotta-pie.png");
+  @include topper;
+}
+
+.topper {
+  @include mQ($medium, $small) {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+#sando {
+  background-image: url("../img/hoagie.jpg");
+  @include topper;
+}
+
+#beets {
+  background-image: url("../img/beets.png");
+  @include topper;
 }

@@ -12,6 +12,12 @@
     }
 }
 
+@mixin topper {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 @mixin clearFix {
   &:after {
     content: "";
