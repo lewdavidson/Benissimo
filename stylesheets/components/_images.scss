@@ -3,15 +3,26 @@ img {
 }
 
 .illustration {
+  position: absolute;
   @include mQ($medium, $small){
     width: 20%;
-    position: absolute;
     &.left {
       left: -1%;
       bottom: 66%;
     }
     &.right {
       left: 78%;
+      top: 70%;
+    }
+  }
+  @include mQ($large, $medium){
+    width: 13%;
+    &.left {
+      left: 0%;
+      bottom: 68%;
+    }
+    &.right {
+      left: 86%;
       top: 70%;
     }
   }

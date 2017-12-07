@@ -8,9 +8,18 @@
   & h2 {
     text-align: center;
   }
+  & a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    color: $peach;
+  }
   @include mQ($medium, $small){
     @include grid(1, 2%);
     padding: 10px;
+  }
+  @include mQ($large, $medium){
+    @include grid(2, 2%);
   }
 }
 
@@ -18,13 +27,20 @@
 
 .textbox {
   position: relative;
+  background-color: lighten($blue, 10%);
+  & a {
+    text-align: center;
+    display: block;
+  }
   @include mQ ($medium, $small) {
     & p {
       padding: 15px;
     }
-    & a {
-      text-align: center;
-      display: block;
+  }
+  @include mQ ($large, $medium) {
+    @include grid(1, 2%);
+    & p {
+      padding: 15px;
     }
   }
 }
