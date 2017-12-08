@@ -66,6 +66,9 @@ h2 {
   text-transform: uppercase;
   color: #E0592C; }
 
+.mixedbox h2 {
+  color: #E0592C; }
+
 nav ul li {
   display: inline; }
 
@@ -121,7 +124,14 @@ header {
     .textbox {
       width: 47%;
       height: 100%;
-      float: right; } }
+      float: right; }
+      .textbox p {
+        padding: 32px;
+        font-size: 18px; }
+      .textbox h2 {
+        font-size: 35px; }
+      .textbox a {
+        font-size: 20px; } }
 
 @media (min-width: 1024px) {
   .top {
@@ -156,7 +166,7 @@ header {
 
 @media (min-width: 1024px) {
   .row1, .row2 {
-    overflow: hidden;
+    overflow: visible;
     height: 23em;
     margin-bottom: 20px; } }
 
@@ -188,13 +198,13 @@ img {
         top: 70%; } }
   @media (min-width: 1024px) {
     .illustration {
-      width: 13%; }
+      width: 20%; }
       .illustration.left {
-        left: 0%;
-        bottom: 68%; }
+        left: -3%;
+        bottom: 82%; }
       .illustration.right {
-        left: 86%;
-        top: 70%; } }
+        left: 81%;
+        top: 79%; } }
 
 .display-photo {
   width: 100%;

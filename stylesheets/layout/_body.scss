@@ -35,6 +35,16 @@
     width: 47%;
     height: 100%;
     float: right;
+    & p {
+      padding: 32px;
+      font-size: 18px;
+    }
+    & h2 {
+      font-size: 35px;
+    }
+    & a {
+      font-size: 20px;
+    }
   }
 }
 
@@ -84,7 +94,7 @@
 
 .row1, .row2 {
   @include desktop {
-    overflow: hidden;
+    overflow: visible;
     height: 23em;
     margin-bottom: 20px;
   }

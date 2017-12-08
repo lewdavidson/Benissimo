@@ -27,14 +27,14 @@ img {
     }
   }
   @include desktop {
-    width: 13%;
+    width: 20%;
     &.left {
-      left: 0%;
-      bottom: 68%;
+      left: -3%;
+      bottom: 82%;
     }
     &.right {
-      left: 86%;
-      top: 70%;
+      left: 81%;
+      top: 79%;
     }
   }
 }
