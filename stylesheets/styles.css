@@ -45,6 +45,10 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+@media (min-width: 1024px) {
+  .container {
+    margin: 10px; } }
+
 h1, h2, a, footer {
   font-family: 'Roboto', sans-serif; }
 

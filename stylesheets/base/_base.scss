@@ -5,3 +5,9 @@
 *, *::before, *::after {
   @include box-sizing(border-box);
 }
+
+.container {
+  @include desktop {
+    margin: 10px;
+  }
+}
