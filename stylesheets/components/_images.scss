@@ -4,7 +4,7 @@ img {
 
 .illustration {
   position: absolute;
-  @include mQ($medium, $small){
+  @include mobile {
     width: 20%;
     &.left {
       left: -1%;
@@ -15,7 +15,18 @@ img {
       top: 70%;
     }
   }
-  @include mQ($large, $medium){
+  @include tablet {
+    width: 13%;
+    &.left {
+      left: 0%;
+      bottom: 68%;
+    }
+    &.right {
+      left: 86%;
+      top: 70%;
+    }
+  }
+  @include desktop {
     width: 13%;
     &.left {
       left: 0%;
@@ -31,6 +42,10 @@ img {
 .display-photo {
   width: 100%;
   height: 300px;
+  @include desktop {
+    overflow: hidden;
+    height: 160px;
+  }
 }
 
 #veg {
@@ -44,9 +59,18 @@ img {
 }
 
 .topper {
-  @include mQ($medium, $small) {
-    width: 100%;
+  width: 100%;
+  @include mobile {
     height: 200px;
+  }
+  @include tablet{
+    height: 300px;
+  }
+  @include desktop{
+    height: 166px;
+    width: 40%;
+    float: left;
+    margin-right: 15px;
   }
 }
 

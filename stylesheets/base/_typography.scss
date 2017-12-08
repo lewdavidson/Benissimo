@@ -1,3 +1,18 @@
-header {
+
+h2 {
+  color: darken($blue, 20%);
   text-align: center;
+  font-size: 25px;
+  line-height: 1;
+
+  @include tablet {
+    font-size: 35px;
+  }
 }
+
+.box a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    color: $peach;
+  }

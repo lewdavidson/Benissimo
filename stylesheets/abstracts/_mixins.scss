@@ -26,16 +26,21 @@
   }
 }
 
-@mixin mQ($arg...){
-  @if length($arg) == 1{
-    @media screen and (max-width: nth($arg, 1)){
-      @content;
-    }
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
   }
-  @if length($arg) == 2{
-    @media screen and (max-width: nth($arg,1)) and (min-width: nth($arg, 2)){
-      @content;
-    }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
   }
 }
 

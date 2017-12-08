@@ -9,6 +9,13 @@ nav ul {
 }
 
 header {
-  font-size: 60px;
+  font-size: 20px;
+  text-align: center;
   color: $pink;
+  @include tablet {
+    font-size: 40px;
+  }
+  @include desktop {
+    font-size: 60px;
+  }
 }

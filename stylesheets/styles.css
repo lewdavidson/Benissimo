@@ -51,27 +51,36 @@ h1, h2, a, footer {
 .textbox, .mixedbox {
   font-family: 'Open Sans', sans-serif; }
 
-header {
-  text-align: center; }
-
-nav ul li {
-  display: inline; }
-
-header {
-  font-size: 60px;
-  color: #D6A99A; }
-
-.box h2 {
+h2 {
   color: #95a89b;
   text-align: center;
-  font-size: 35px;
+  font-size: 25px;
   line-height: 1; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    h2 {
+      font-size: 35px; } }
+
 .box a {
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   color: #E0592C; }
-@media screen and (max-width: 768px) and (min-width: 320px) {
+
+nav ul li {
+  display: inline; }
+
+header {
+  font-size: 20px;
+  text-align: center;
+  color: #D6A99A; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    header {
+      font-size: 40px; } }
+  @media (min-width: 1024px) {
+    header {
+      font-size: 60px; } }
+
+@media (max-width: 767px) {
   .box {
     float: left;
     margin-right: 2%;
@@ -80,7 +89,7 @@ header {
     padding: 10px; }
     .box:nth-child(1n) {
       margin-right: 0; } }
-@media screen and (max-width: 1024px) and (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .box {
     float: left;
     margin-right: 2%;
@@ -95,10 +104,10 @@ header {
   .textbox a {
     text-align: center;
     display: block; }
-  @media screen and (max-width: 768px) and (min-width: 320px) {
+  @media (max-width: 767px) {
     .textbox p {
       padding: 15px; } }
-  @media screen and (max-width: 1024px) and (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1023px) {
     .textbox {
       float: left;
       margin-right: 2%;
@@ -108,18 +117,48 @@ header {
         margin-right: 0; }
       .textbox p {
         padding: 15px; } }
-  @media screen and (max-width: 1024px) {
+  @media (min-width: 1024px) {
     .textbox {
       width: 47%;
-      height: 41.5em;
+      height: 100%;
       float: right; } }
 
-@media screen and (max-width: 1024px) {
+@media (min-width: 1024px) {
   .top {
     width: 50%;
-    float: left; } }
+    height: 100%;
+    float: left; }
+    .top .box {
+      width: 100%;
+      display: inline-block; } }
 .top .box {
   width: 100%; }
+
+@media (min-width: 1024px) {
+  .bottom {
+    height: 100%; }
+    .bottom .mixedbox {
+      width: 50%;
+      height: 50%;
+      float: right; }
+      .bottom .mixedbox a {
+        display: none; }
+      .bottom .mixedbox p {
+        font-size: 15px; }
+      .bottom .mixedbox i.material-icons {
+        display: none; } }
+
+@media (min-width: 1024px) {
+  .last {
+    width: 47%;
+    height: 100%;
+    float: left; } }
+
+@media (min-width: 1024px) {
+  .row1, .row2 {
+    overflow: hidden;
+    height: 23em;
+    margin-bottom: 20px; } }
 
 i.material-icons {
   float: right; }
@@ -129,7 +168,7 @@ img {
 
 .illustration {
   position: absolute; }
-  @media screen and (max-width: 768px) and (min-width: 320px) {
+  @media (max-width: 767px) {
     .illustration {
       width: 20%; }
       .illustration.left {
@@ -138,7 +177,16 @@ img {
       .illustration.right {
         left: 78%;
         top: 70%; } }
-  @media screen and (max-width: 1024px) and (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .illustration {
+      width: 13%; }
+      .illustration.left {
+        left: 0%;
+        bottom: 68%; }
+      .illustration.right {
+        left: 86%;
+        top: 70%; } }
+  @media (min-width: 1024px) {
     .illustration {
       width: 13%; }
       .illustration.left {
@@ -151,6 +199,10 @@ img {
 .display-photo {
   width: 100%;
   height: 300px; }
+  @media (min-width: 1024px) {
+    .display-photo {
+      overflow: hidden;
+      height: 160px; } }
 
 #veg {
   background-image: url("../img/veg2.jpg");
@@ -164,10 +216,20 @@ img {
   background-position: center;
   background-repeat: no-repeat; }
 
-@media screen and (max-width: 768px) and (min-width: 320px) {
-  .topper {
-    width: 100%;
-    height: 200px; } }
+.topper {
+  width: 100%; }
+  @media (max-width: 767px) {
+    .topper {
+      height: 200px; } }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .topper {
+      height: 300px; } }
+  @media (min-width: 1024px) {
+    .topper {
+      height: 166px;
+      width: 40%;
+      float: left;
+      margin-right: 15px; } }
 
 #sando {
   background-image: url("../img/hoagie.jpg");

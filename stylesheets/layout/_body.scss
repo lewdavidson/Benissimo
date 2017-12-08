@@ -3,25 +3,12 @@
 // -----------------------------------------------------------------------------
 //$breakpoints: ("small": 320px, "medium": 768px, "large": 1024px) !default
 
-
 .box {
-  & h2 {
-    color: darken($blue, 20%);
-    text-align: center;
-    font-size: 35px;
-    line-height: 1;
-  }
-  & a {
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
-    color: $peach;
-  }
-  @include mQ($medium, $small){
+  @include mobile {
     @include grid(1, 2%);
     padding: 10px;
   }
-  @include mQ($large, $medium){
+  @include tablet {
     @include grid(2, 2%);
   }
 }
@@ -33,30 +20,72 @@
     text-align: center;
     display: block;
   }
-  @include mQ ($medium, $small) {
+  @include mobile {
     & p {
       padding: 15px;
     }
   }
-  @include mQ ($large, $medium) {
+  @include tablet {
     @include grid(1, 2%);
     & p {
       padding: 15px;
     }
   }
-  @include mQ($large){
+  @include desktop {
     width: 47%;
-    height: 41.5em;
+    height: 100%;
     float: right;
   }
 }
 
 .top{
-  @include mQ($large){
+  @include desktop {
     width: 50%;
+    height: 100%;
     float: left;
+    & .box{
+      width: 100%;
+      display: inline-block;
+    }
   }
   & .box{
     width: 100%;
+  }
+}
+
+.bottom {
+  @include desktop {
+    height: 100%;
+
+    & .mixedbox{
+      width: 50%;
+      height: 50%;
+      float: right;
+      & a {
+        display: none;
+      }
+      & p {
+        font-size: 15px;
+      }
+      & i.material-icons {
+        display: none;
+      }
+    }
+  }
+}
+
+.last {
+  @include desktop {
+    width: 47%;
+    height: 100%;
+    float: left;
+  }
+}
+
+.row1, .row2 {
+  @include desktop {
+    overflow: hidden;
+    height: 23em;
+    margin-bottom: 20px;
   }
 }
